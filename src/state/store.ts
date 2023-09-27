@@ -1,9 +1,14 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {CounterReducer} from "../features/counter/counterSlice.ts";
+import {CounterReducer, counterInitialState} from "../features/counter/counterSlice.ts";
 import {loadState, saveState} from "../utils/localStorage.ts";
 import {throttle} from "lodash";
+import objectAssignDeep from 'object-assign-deep';
 
-const preloadedState = loadState()
+const loadedState = loadState()
+
+const preloadedState = {
+  counter: objectAssignDeep(structuredClone(counterInitialState), loadedState.counter)
+}
 
 export const store = configureStore({
   reducer: {
