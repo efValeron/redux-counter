@@ -869,6 +869,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.6.5.tgz#4c6a79adf59a8e8193ac87a0e522605b16587258"
   integrity sha512-2qGq5LAOTh9izcc0+F+dToFigBWiK1phKPt7rNhOqJSr35y8rlIBjDwGtFSgAI6MGIhjwOVNSQZVdJsZJ2uR1w==
 
+"@types/object-assign-deep@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@types/object-assign-deep/-/object-assign-deep-0.4.1.tgz#6bb3c9f81ab6ee8af09276fded7b231b85ea406f"
+  integrity sha512-uWJatOM1JKDdF6Fwa16124b76BtxvTz5Lv+ORGuI7dwqU4iqExXpeHrHOi1c8BU4FgSJ6PdH0skR9Zmz8+MUqQ==
+
 "@types/prop-types@*":
   version "15.7.7"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.7.tgz#f9361f7b87fd5d8188b2c998db0a1f47e9fb391a"
@@ -2643,6 +2648,11 @@ npm-run-path@^4.0.1:
   integrity sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==
   dependencies:
     path-key "^3.0.0"
+
+object-assign-deep@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/object-assign-deep/-/object-assign-deep-0.4.0.tgz#43505d3679abb9686ab359b97ac14cc837a9d143"
+  integrity sha512-54Uvn3s+4A/cMWx9tlRez1qtc7pN7pbQ+Yi7mjLjcBpWLlP+XbSHiHbQW6CElDiV4OvuzqnMrBdkgxI1mT8V/Q==
 
 object-assign@^4.0.1:
   version "4.1.1"
