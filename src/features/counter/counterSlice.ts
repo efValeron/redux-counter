@@ -9,7 +9,7 @@ export type CounterState = {
   }
 }
 
-const initialState: CounterState = {
+export const counterInitialState: CounterState = {
   value: 0,
   config: {
     maxValue: 5,
@@ -20,7 +20,7 @@ const initialState: CounterState = {
 
 export const counterSlice = createSlice({
   name: "counter",
-  initialState,
+  initialState: counterInitialState,
   reducers: {
     increment: (state) => {
       state.value += 1
