@@ -7,7 +7,7 @@ import objectAssignDeep from 'object-assign-deep';
 const loadedState = loadState()
 
 const preloadedState = {
-  counter: objectAssignDeep(structuredClone(counterInitialState), loadedState.counter)
+  counter: loadedState && loadedState.counter ? objectAssignDeep(structuredClone(counterInitialState), loadedState.counter) : counterInitialState
 }
 
 export const store = configureStore({
