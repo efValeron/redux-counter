@@ -12,9 +12,9 @@ export const Button = ({title, callBack, active = true}: Props) => {
   return (
     <button
       onClick={clickHandler}
-      className={`${active ? "bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700" : "bg-cyan-800 cursor-default"} text-gray-800 border-box p-4 rounded-md duration-100`}
+      className={`${active ? "bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700" : "bg-cyan-800 cursor-default"} text-gray-800 border-box p-2 md:p-4 rounded-md duration-100`}
     >
-      <h3 className="text-5xl font-bold">{title}</h3>
+      <p className="text-center text-base md:text-xl xl:text-3xl font-bold">{title}</p>
     </button>
   )
 }

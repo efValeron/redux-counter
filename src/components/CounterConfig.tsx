@@ -24,19 +24,23 @@ export const CounterConfig = ({setIsConfigured}: { setIsConfigured: (value: bool
     <>
       <div
         className="bg-cyan-500 border-box font-bold flex flex-col gap-4 justify-center rounded border-box p-6 cursor-default">
-        <div className="flex flex-row justify-between gap-8">
-          <h3 className="text-4xl">Max value:</h3>
+        <div className="flex flex-row justify-between gap-4 md:gap-8 items-center">
+          <p className="text-base md:text-xl xl:text-2xl w-1/3">Max value:</p>
           <Input type="number" callBack={setMaxInputValue} value={maxInputValue}
-                 error={maxInputValue <= minInputValue}/>
+                 error={maxInputValue <= minInputValue}
+                 className="w-full p-3 md:p-4 lg:text-lg"
+          />
         </div>
-        <div className="flex flex-row justify-between gap-8">
-          <h3 className="text-4xl">Min value:</h3>
+        <div className="flex flex-row justify-between gap-4 md:gap-8 items-center">
+          <p className="text-base md:text-xl xl:text-2xl w-1/3">Min value:</p>
           <Input type="number" callBack={setMinInputValue} value={minInputValue}
-                 error={minInputValue < minAllowed}/>
+                 error={minInputValue < minAllowed}
+                 className="w-full p-3 md:p-4 lg:text-lg"
+          />
         </div>
       </div>
 
-      <div className="flex flex-row justify-center gap-8 border-8 border-cyan-500 rounded-md border-box p-8">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-evenly border-4 md:border-8 border-cyan-500 rounded-md border-box p-4 md:p-8">
         <Button title="set" active={minInputValue >= minAllowed && maxInputValue > minInputValue}
                 callBack={confirmNewConfig}/>
       </div>

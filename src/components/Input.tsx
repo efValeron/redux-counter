@@ -5,9 +5,10 @@ type Props = {
   callBack: (value: number) => void
   value: number
   error: boolean
+  className?: string
 }
 
-export const Input = ({type, callBack, value, error}: Props) => {
+export const Input = ({type, callBack, value, error, className=""}: Props) => {
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     try {
       callBack(JSON.parse(e.currentTarget.value))
@@ -22,6 +23,7 @@ export const Input = ({type, callBack, value, error}: Props) => {
       value={value}
       onChange={onChangeHandler}
       type={type}
-      className={`${error ? "border-2 border-red-500 bg-red-200" : "border-0"} text-gray-800 border-box p-4 rounded-md`}/>
+      className={`${error ? "border-2 border-red-500 bg-red-200" : "border-0"} text-gray-800 border-box rounded-md ` + className}
+    />
   )
 }
